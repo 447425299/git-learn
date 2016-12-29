@@ -65,10 +65,12 @@ bool VisualOdometry::AddFrame( Frame* frame )
         SetKeyframe(_ref_frame, true);
         _status = VO_INITING;
     }
+    int a=1;
+    int b=1;
 
-    _curr_frame = frame;
+ 
     _last_status = _status;
-
+   _curr_frame = frame;
     if ( _status == VO_INITING ) {
         // TODO add stereo and RGBD initialization
         MonocularInitialization();
